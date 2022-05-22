@@ -7,7 +7,7 @@ plugins {
 group = "com.example"
 version = "1.0-SNAPSHOT"
 
-apply(from = "plugin-include.build.gradle.kts")
+apply(plugin = "plugin-include.build")
 
 intellij {
 
