@@ -7,21 +7,8 @@ plugins {
 group = "com.example"
 version = "1.0-SNAPSHOT"
 
-repositories {
-  mavenCentral()
-}
+apply(from = "plugin-include.build.gradle.kts")
 
 intellij {
-  version.set("2021.2")
-  type.set("IC") // Target IDE Platform
-  plugins.set(listOf(/* Plugin Dependencies */))
-}
 
-tasks.withType<JavaCompile> {
-  sourceCompatibility = "11"
-  targetCompatibility = "11"
-}
-
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-  kotlinOptions.jvmTarget = "11"
 }
